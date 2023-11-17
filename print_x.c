@@ -6,13 +6,13 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:45:45 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/15 19:12:55 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:24:33 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	void	print_hex(char *str, int i)
+static void	print_hex(char *str, int i)
 {
 	i--;
 	while (i >= 0)
@@ -22,17 +22,18 @@ static	void	print_hex(char *str, int i)
 	}
 }
 
-void	print_x(unsigned long n, char c)
+int	print_x(unsigned long n, char c)
 {
 	char				str[20];
 	unsigned long		i;
 	unsigned long		j;
 
 	j = 0;
+	i = 0;
 	if (n == 0)
 	{
 		print_ch('0');
-		return ;
+		return (1);
 	}
 	while (n != 0)
 	{
@@ -47,6 +48,7 @@ void	print_x(unsigned long n, char c)
 		n = n / 16;
 	}
 	print_hex(str, j);
+	return (ft_strlen(str));
 }
 
 // int main()

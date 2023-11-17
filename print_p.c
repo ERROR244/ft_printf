@@ -6,25 +6,34 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:55:37 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/15 19:21:11 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/17 22:10:42 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	print_p(void *ptr)
+int	print_p(void *ptr)
 {
 	unsigned long	address;
+	int len;
 
+	len = 0;
 	address = (unsigned long)ptr;
-	print_ch('0');
-	print_ch('x');
-	print_x(address, 'x');
+	len += print_ch('0');
+	len += print_ch('x');
+	len += print_x(address, 'x');
+	return (len);
 }
 
 // int main()
 // {
-// 	char i = 'a';
-// 	print_p(&i);
-// 	printf("\n%p\n", &i);
+//     void *ptr = (void *)0x12345678;
+
+//     int printf_p_return = print_p(ptr);
+//     int printf_return = printf("%p", ptr);
+
+// 	printf("\n");
+//     printf("printf return: %d, print_p return: %d \n", printf_return, printf_p_return);
+
+//     return 0;
 // }

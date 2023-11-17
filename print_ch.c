@@ -6,13 +6,19 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:28:39 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/15 18:47:37 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:01:35 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	print_ch(char c)
+int	print_ch(char c)
 {
-	write(1, &c, 1);
+	int	len;
+
+	len = 0;
+	len = write(1, &c, 1);
+	if (len == -1)
+		return (-1);
+	return (len);
 }

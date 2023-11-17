@@ -6,17 +6,22 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:32:37 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/15 18:47:28 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/17 21:26:42 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	print_str(char *str)
+int	print_str(char *str)
 {
+	int i;
+
+	i = 0;
 	while (*str)
 	{
 		print_ch(*str);
+		i++;
 		str++;
 	}
+	return (i);
 }
