@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:28:39 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/17 21:01:35 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/18 11:01:51 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ int	print_ch(char c)
 	len = write(1, &c, 1);
 	if (len == -1)
 		return (-1);
-	return (len);
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:45:45 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/17 21:24:33 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/18 11:48:31 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,7 @@ int	print_x(unsigned long n, char c)
 	j = 0;
 	i = 0;
 	if (n == 0)
-	{
-		print_ch('0');
-		return (1);
-	}
+		return (print_ch('0'));
 	while (n != 0)
 	{
 		i = n % 16;
@@ -47,9 +44,17 @@ int	print_x(unsigned long n, char c)
 		str[j++] = i;
 		n = n / 16;
 	}
+	str[j] = '\0';
 	print_hex(str, j);
 	return (ft_strlen(str));
 }
+
+// int main()
+// {
+// 	void *ptr = "knke";
+// 	printf("%d \n", print_x((unsigned int)ptr, 'x'));
+// 	printf("%d \n", printf("%x", (unsigned int)ptr));
+// }
 
 // int main()
 // {
