@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 13:20:34 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/18 12:15:09 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/19 20:05:45 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,16 @@ int	print_u(unsigned int n)
 		print_u(n / 10);
 		print_ch((n % 10) + 48);
 	}
-	i = return_len(n);
+	if (i == 0)
+		i = 1;
+	else
+		i = return_len(n);
 	return (i);
 }
 
 // int	main(void)
 // {
-// 	int i = print_u(4294967295);
+// 	int i = print_u(1);
 // 	print_ch('\n');
 // 	printf("%d \n", i);
 // }

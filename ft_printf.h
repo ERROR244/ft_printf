@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:35:27 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/18 12:22:17 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/19 19:14:49 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 int	print_ch(char c);
 int	print_str(char *str);
-int	print_i_d(int i);
+int	print_i_d(long long i);
 int	print_u(unsigned int i);
-int	print_x(unsigned long n, char c);
+int	print_x(unsigned int n, char c);
 int	print_p(void *ptr);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_printf(const char *str, ...);

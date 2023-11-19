@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 20:47:13 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/18 17:28:04 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/19 20:20:34 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,14 @@ int	ft_printf(const char *str, ...)
 	va_end(lst);
 	return (return_len);
 }
+// int main()
+// {
+// 	int i = ft_printf("\001\002\007\v\010\f\r\n");
+// 	int a = printf("\001\002\007\v\010\f\r\n");
 
+// 	printf("%d \n", i);
+// 	printf("%d \n", a);
+// }
 // ///////////////return test////////////////
 
 // // int main()
