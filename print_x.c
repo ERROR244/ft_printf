@@ -6,25 +6,31 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:45:45 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/19 20:31:50 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/19 21:15:37 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	print_hex(char *str, int i)
+static int	print_hex(char *str, int i)
 {
+	int x;
+
 	i--;
 	while (i >= 0)
 	{
-		print_ch(str[i]);
+		x = print_ch(str[i]);
+		if (x < 0)
+			return (x);
 		i--;
 	}
+	return (x);
 }
 
 int	print_x(unsigned int n, char c)
 {
 	char				str[40];
+	int					x;
 	unsigned int		i;
 	unsigned int		j;
 
@@ -45,7 +51,9 @@ int	print_x(unsigned int n, char c)
 		n = n / 16;
 	}
 	str[j] = '\0';
-	print_hex(str, j);
+	x = print_hex(str, j);
+	if (x < 0)
+		return (x);
 	return (ft_strlen(str));
 }
 

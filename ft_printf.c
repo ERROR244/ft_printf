@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 20:47:13 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/19 20:20:34 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/19 21:13:36 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,23 @@ int	check_and_print(char *str, va_list lst)
 
 	return_len = 0;
 	if (ft_strncmp("%c", str, 2) == 0)
-		return_len += print_ch(va_arg(lst, int));
+		return_len = print_ch(va_arg(lst, int));
 	else if (ft_strncmp("%d", str, 2) == 0)
-		return_len += print_i_d(va_arg(lst, int));
+		return_len = print_i_d(va_arg(lst, int));
 	else if (ft_strncmp("%i", str, 2) == 0)
-		return_len += print_i_d(va_arg(lst, int));
+		return_len = print_i_d(va_arg(lst, int));
 	else if (ft_strncmp("%p", str, 2) == 0)
-		return_len += print_p(va_arg(lst, void *));
+		return_len = print_p(va_arg(lst, void *));
 	else if (ft_strncmp("%s", str, 2) == 0)
-		return_len += print_str(va_arg(lst, char *));
+		return_len = print_str(va_arg(lst, char *));
 	else if (ft_strncmp("%u", str, 2) == 0)
-		return_len += print_u(va_arg(lst, unsigned int));
+		return_len = print_u(va_arg(lst, unsigned int));
 	else if (ft_strncmp("%x", str, 2) == 0)
-		return_len += print_x(va_arg(lst, unsigned long), 'x');
+		return_len = print_x(va_arg(lst, unsigned long), 'x');
 	else if (ft_strncmp("%X", str, 2) == 0)
-		return_len += print_x(va_arg(lst, unsigned long), 'X');
+		return_len = print_x(va_arg(lst, unsigned long), 'X');
 	else if (ft_strncmp("%%", str, 2) == 0)
-		return_len += print_ch('%');
+		return_len = print_ch('%');
 	return (return_len);
 }
 
@@ -42,6 +42,7 @@ int	ft_printf(const char *str, ...)
 {
 	int		return_len;
 	int		i;
+	int		k;
 	va_list	lst;
 	char	ptr[3];
 
@@ -50,20 +51,25 @@ int	ft_printf(const char *str, ...)
 	return_len = 0;
 	while (str[i] != '\0')
 	{
+		k = 0;
 		if (str[i] == '%')
 		{
 			ptr[0] = str[i];
 			ptr[1] = str[i + 1];
 			ptr[2] = '\0';
-			return_len += check_and_print(ptr, lst);
+			k = check_and_print(ptr, lst);
 			i += 2;
 		}
 		else
-			return_len += print_ch(str[i++]);
+			k = print_ch(str[i++]);
+		if (k < 0)
+			return (k);
+		return_len += k;
 	}
 	va_end(lst);
 	return (return_len);
 }
+
 // int main()
 // {
 // 	int i = ft_printf("\001\002\007\v\010\f\r\n");
