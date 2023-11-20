@@ -6,13 +6,13 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 20:47:13 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/19 21:13:36 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/20 09:26:25 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	check_and_print(char *str, va_list lst)
+static int	check_and_print(char *str, va_list lst)
 {
 	int	return_len;
 
@@ -38,13 +38,25 @@ int	check_and_print(char *str, va_list lst)
 	return (return_len);
 }
 
+static int	to_check_ptr(const char *str, int i, va_list lst)
+{
+	int		k;
+	char	ptr[3];
+
+	k = 0;
+	ptr[0] = str[i];
+	ptr[1] = str[i + 1];
+	ptr[2] = '\0';
+	k = check_and_print(ptr, lst);
+	return (k);
+}
+
 int	ft_printf(const char *str, ...)
 {
 	int		return_len;
 	int		i;
 	int		k;
 	va_list	lst;
-	char	ptr[3];
 
 	va_start(lst, str);
 	i = 0;
@@ -54,10 +66,7 @@ int	ft_printf(const char *str, ...)
 		k = 0;
 		if (str[i] == '%')
 		{
-			ptr[0] = str[i];
-			ptr[1] = str[i + 1];
-			ptr[2] = '\0';
-			k = check_and_print(ptr, lst);
+			k = to_check_ptr(str, i, lst);
 			i += 2;
 		}
 		else
@@ -72,8 +81,8 @@ int	ft_printf(const char *str, ...)
 
 // int main()
 // {
-// 	int i = ft_printf("\001\002\007\v\010\f\r\n");
-// 	int a = printf("\001\002\007\v\010\f\r\n");
+// 	int i = ft_printf("%d \n", 0);
+// 	int a = printf("%d \n", 0);
 
 // 	printf("%d \n", i);
 // 	printf("%d \n", a);
@@ -136,7 +145,7 @@ int	ft_printf(const char *str, ...)
 // //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
 // 	printf_return);
 
-// //     return 0;
+// //     return (0);
 // // }
 
 // /////////////testes////////////////////
@@ -198,5 +207,5 @@ int	ft_printf(const char *str, ...)
 // // // 	printf("Hello, %s! You are %d years old, and your random number is
 // // 		%d. Cheers! \n", str, i, j);
 
-// // //     return 0;
+// // //     return (0);
 // // // }

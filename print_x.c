@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:45:45 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/19 21:15:37 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/20 09:09:49 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	print_hex(char *str, int i)
 {
-	int x;
+	int	x;
 
 	i--;
 	while (i >= 0)
@@ -29,10 +29,9 @@ static int	print_hex(char *str, int i)
 
 int	print_x(unsigned int n, char c)
 {
-	char				str[40];
-	int					x;
-	unsigned int		i;
-	unsigned int		j;
+	char			str[40];
+	unsigned int	i;
+	unsigned int	j;
 
 	j = 0;
 	i = 0;
@@ -51,9 +50,8 @@ int	print_x(unsigned int n, char c)
 		n = n / 16;
 	}
 	str[j] = '\0';
-	x = print_hex(str, j);
-	if (x < 0)
-		return (x);
+	if (print_hex(str, j) < 0)
+		return (-1);
 	return (ft_strlen(str));
 }
 
@@ -94,5 +92,5 @@ int	print_x(unsigned int n, char c)
 // 		printf("\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }
