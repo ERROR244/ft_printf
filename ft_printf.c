@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 20:47:13 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/20 09:26:25 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/21 22:20:45 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ static int	check_and_print(char *str, va_list lst)
 		return_len = print_x(va_arg(lst, unsigned long), 'X');
 	else if (ft_strncmp("%%", str, 2) == 0)
 		return_len = print_ch('%');
+	else
+		return_len = print_ch(str[1]);
 	return (return_len);
 }
 
@@ -79,14 +81,15 @@ int	ft_printf(const char *str, ...)
 	return (return_len);
 }
 
-// int main()
-// {
-// 	int i = ft_printf("%d \n", 0);
-// 	int a = printf("%d \n", 0);
+int main()
+{
+ 	int i = ft_printf("%kjdvnirnw%");
+	printf("\n");
+ 	int a = printf("%kjdvnirnw%");
 
-// 	printf("%d \n", i);
-// 	printf("%d \n", a);
-// }
+ 	printf("\n%d \n", i);
+ 	printf("%d \n", a);
+ }
 // ///////////////return test////////////////
 
 // // int main()
