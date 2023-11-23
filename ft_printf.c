@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 20:47:13 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/23 10:07:42 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/23 12:06:11 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,133 +92,129 @@ int	ft_printf(const char *str, ...)
 	return (return_len);
 }
 
-// int main()
+// int	main(void)
 // {
-//  	int i = ft_printf("%");
+// 	int	i;
+// 	int	a;
+
+// 	i = ft_printf("%d=====%", 42);
 // 	printf("\n");
-//  	int a = printf("%");
-//  	printf("\n%d \n", i);
-//  	printf("%d \n", a);
-//  }
+// 	a = printf("%d=====%", 42);
+// 	printf("\nfake = %d \n", i);
+// 	printf("real = %d \n", a);
+// }
 // ///////////////return test////////////////
 
-// // int main()
-// // {
-// //     int i;
-// //     int ii;
-// //     int j;
-// //     unsigned int k = 4294967295;
-// //     char c;
-// //     char str[100];
+// int	main(void)
+// {
+// 	int				i;
+// 	int				ii;
+// 	int				j;
+// 	unsigned int	k;
+// 	char			c;
+// 	char			str[100];
 
-// //     int ft_printf_return ;
-// //     int printf_return ;
-
-// //     ft_printf_return (= ft_printf("Character: %c \n", 'A'));
-// //     printf_return (= printf("Character: %c \n", 'A'));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 	k = 4294967295;
+// 	int ft_printf_return ;
+// 	int printf_return ;
+// 	ft_printf_return = ft_printf("Character: %c \n", 'A');
+// 	printf_return = printf("Character: %c \n", 'A');
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
 // 	printf_return);
+// 	ft_printf_return= ft_printf("Integer (decimal): %d \n", 12345);
+// 	printf_return= printf("Integer (decimal): %d \n", 12345);
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 		printf_return);
+// 	ft_printf_return= ft_printf("Negative Integer (decimal): %d \n", -9876);
+// 	printf_return= printf("Negative Integer (decimal): %d \n", -9876);
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 		printf_return);
+// 	ft_printf_return= ft_printf("Integer (hex): %x \n", 255);
+// 	printf_return= printf("Integer (hex): %x \n", 255);
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 		printf_return);
+// 	ft_printf_return= ft_printf("String: %s \n", "Hello, World!");
+// 	printf_return= printf("String: %s \n", "Hello, World!");
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 		printf_return);
+// 	ft_printf_return= ft_printf("Unsigned Integer: %u \n", k);
+// 	printf_return= printf("Unsigned Integer: %u \n", k);
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 		printf_return);
+// 	ft_printf_return= ft_printf("Pointer: %p\n", (void *)0x12345678);
+// 	printf_return= printf("Pointer: %p\n", (void *)0x12345678);
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 		printf_return);
+// 	ft_printf_return= ft_printf("Custom Test: %s %i %d %% khalil \n", "Sohail",
+// 			1337, 42);
+// 	printf_return= printf("Custom Test: %s %i %d %% khalil \n", "Sohail", 1337,
+// 			42);
+// 	printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
+// 		printf_return);
+// 	return (0);
+// }
 
-// //     ft_printf_return (= ft_printf("Integer (decimal): %d \n", 12345));
-// //     printf_return (= printf("Integer (decimal): %d \n", 12345));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
-// 	printf_return);
+///////////////testes////////////////////
 
-// //     ft_printf_return (= ft_printf("Negative Integer (decimal): %d \n",
-// 		-9876));
-// //     printf_return (= printf("Negative Integer (decimal): %d \n", -9876));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
-// 	printf_return);
+// int main()
+// {
+//     int i;
+//     int ii;
+// 	int j;
+//     unsigned int k;
+//     char c;
+//     char str[100];
 
-// //     ft_printf_return (= ft_printf("Integer (hex): %x \n", 255));
-// //     printf_return (= printf("Integer (hex): %x \n", 255));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
-// 	printf_return);
+// 	ft_printf("character :");
+//     scanf(" %c", &c);
+//     printf("Character: %c \n", c);
+//     ft_printf("Character: %c \n", c);
 
-// //     ft_printf_return (= ft_printf("String: %s \n", "Hello, World!"));
-// //     printf_return (= printf("String: %s \n", "Hello, World!"));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
-// 	printf_return);
+// 	ft_printf("intger(hex)(decimal) :");
+//     scanf("%d", &i);
+//     printf("Integer (decimal): %d \n", i);
+//     ft_printf("Integer (decimal): %d \n", i);
 
-// //     ft_printf_return (= ft_printf("Unsigned Integer: %u \n", k));
-// //     printf_return (= printf("Unsigned Integer: %u \n", k));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
-// 	printf_return);
+// 	printf("Integer (hex): %x \n", i);
+//     ft_printf("Integer (hex): %x \n", i);
 
-// //     ft_printf_return (= ft_printf("Pointer: %p\n", (void *)0x12345678));
-// //     printf_return (= printf("Pointer: %p\n", (void *)0x12345678));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
-// 	printf_return);
+// 	ft_printf("-intger(hex)(decimal) :");
+//     scanf("%d", &ii);
+//     printf("Negative Integer (decimal): %d \n", ii);
+//     ft_printf("Negative Integer (decimal): %d \n", ii);
 
-// //     ft_printf_return (= ft_printf("Custom Test: %s %i %d %% khalil \n",
-// 		"Sohail", 1337, 42));
-// //     printf_return (= printf("Custom Test: %s %i %d %% khalil \n",
-//  						"Sohail",
-// 		1337, 42));
-// //     printf("ft_printf return: %d, printf return: %d\n", ft_printf_return,
-// 	printf_return);
+//     printf("-Integer (-hex): %x \n", ii);
+//     ft_printf("-Integer (-hex): %x \n", ii);
 
-// //     return (0);
-// // }
+// 	ft_printf("string (his address) :");
+//     scanf("%s", str);
+//     printf("String: %s \n", str);
+//     ft_printf("String: %s \n", str);
 
-// /////////////testes////////////////////
+//     printf("Pointer: %p \n", str);
+//     ft_printf("Pointer: %p \n", str);
 
-// // int main()
-// // {
-// //     int i;
-// //     int ii;
-// // 	int j;
-// //     unsigned int k;
-// //     char c;
-// //     char str[100];
+// 	ft_printf("unsigned intger :");
+//     scanf("%u", &k);
+//     printf("Unsigned Integer: %u \n", k);
+//     ft_printf("Unsigned Integer: %u \n", k);
 
-// // 	ft_printf("character :");
-// //     scanf(" %c", &c);
-// //     printf("Character: %c \n", c);
-// //     ft_printf("Character: %c \n", c);
+// 	printf("1 name: ");
+// 	scanf("%s", str);
 
-// // 	ft_printf("intger(hex)(decimal) :");
-// //     scanf("%d", &i);
-// //     printf("Integer (decimal): %d \n", i);
-// //     ft_printf("Integer (decimal): %d \n", i);
+// 	char *str1;
 
-// // 	printf("Integer (hex): %x \n", i);
-// //     ft_printf("Integer (hex): %x \n", i);
+// 	printf("2 name: ");
+// 	scanf("%s", str1);
 
-// // 	ft_printf("-intger(hex)(decimal) :");
-// //     scanf("%d", &ii);
-// //     printf("Negative Integer (decimal): %d \n", ii);
-// //     ft_printf("Negative Integer (decimal): %d \n", ii);
+// 	printf("age :");
+// 	scanf("%d", &i);
 
-// //     printf("-Integer (-hex): %x \n", ii);
-// //     ft_printf("-Integer (-hex): %x \n", ii);
+// 	printf("random number: ");
+// 	scanf("%d", &j);
 
-// // 	ft_printf("string (his address) :");
-// //     scanf("%s", str);
-// //     printf("String: %s \n", str);
-// //     ft_printf("String: %s \n", str);
+// 	ft_printf("Hello, %s %s! You are %d years old, and your random number is %d. Cheers! \n", str, str1, i, j);
+//  	printf("Hello, %s %s! You are %d years old, and your random number is %d. Cheers! \n", str, str1, i, j);
 
-// //     printf("Pointer: %p \n", str);
-// //     ft_printf("Pointer: %p \n", str);
-
-// // 	ft_printf("unsigned intger :");
-// //     scanf("%u", &k);
-// //     printf("Unsigned Integer: %u \n", k);
-// //     ft_printf("Unsigned Integer: %u \n", k);
-
-// // 	printf("name: ");
-// // 	scanf("%s", str);
-
-// // 	printf("age :");
-// // 	scanf("%d", &i);
-
-// // 	printf("random number: ");
-// // 	scanf("%d", &j);
-
-// // 	ft_printf("Hello, %s! You are %d years old, and your random number is
-// // 		%d. Cheers! \n", str, i, j);
-// // // 	printf("Hello, %s! You are %d years old, and your random number is
-// // 		%d. Cheers! \n", str, i, j);
-
-// // //     return (0);
-// // // }
+//     return (0);
+// }
