@@ -20,7 +20,7 @@ The prototype of ft_printf() is:
 
 Here are the requirements of the projet:
 
-• Don’t implement the buffer management of the original printf().
+• Don’t implement the buffer management of the original printf().\n
 • Your function has to handle the following conversions: cspdiuxX%
 • Your function will be compared against the original printf().
 • You must use the command ar to create your library.
