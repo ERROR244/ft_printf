@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 20:47:13 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/23 12:06:11 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/23 12:10:46 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,12 @@ int	ft_printf(const char *str, ...)
 	va_end(lst);
 	return (return_len);
 }
+
+// int main()
+// {
+// 	ft_printf(NULL);
+// 	printf(NULL);
+// }
 
 // int	main(void)
 // {
