@@ -6,7 +6,7 @@
 /*   By: ksohail- <ksohail-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:55:37 by ksohail-          #+#    #+#             */
-/*   Updated: 2023/11/20 09:13:08 by ksohail-         ###   ########.fr       */
+/*   Updated: 2023/11/23 11:02:48 by ksohail-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	print_hex(char *str, int i)
 	return (x);
 }
 
-static int	static_print_x(unsigned long long n, char c)
+static int	static_print_x(uintptr_t n, char c)
 {
 	char			str[40];
 	unsigned int	i;
@@ -57,12 +57,12 @@ static int	static_print_x(unsigned long long n, char c)
 
 int	print_p(void *ptr)
 {
-	unsigned long	address;
-	int				len;
-	int				k;
+	uintptr_t	address;
+	int			len;
+	int			k;
 
 	len = 0;
-	address = (unsigned long)ptr;
+	address = (uintptr_t)ptr;
 	k = print_ch('0');
 	if (k < 0)
 		return (k);
