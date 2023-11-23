@@ -1,6 +1,6 @@
 # ft_printf
 Because ft_putnbr() and ft_putstr() aren’t enough\
-The goal of this project is pretty straightforward. recode printf() c finction.\
+The goal of this project is pretty straightforward. recode printf() c function.\
 
 # library
 Write a library that contains ft_printf(), a function that will mimic the original printf():\
